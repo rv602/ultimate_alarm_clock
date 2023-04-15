@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
             // TODO: Implement Google login functionality
           },
           icon: Image.asset(
-            'assets/images/google_logo.png',
+            'assets/google_logo.png',
             width: 24.0,
             height: 24.0,
           ),

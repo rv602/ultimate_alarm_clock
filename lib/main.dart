@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ultimate_alarm_clock/utils/auth.dart';
 import 'screens/log_in.dart';
 
-void main() {
-  Authentication.initializeFirebase();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Authentication.initializeFirebase();
   runApp(MyApp());
 }
 
