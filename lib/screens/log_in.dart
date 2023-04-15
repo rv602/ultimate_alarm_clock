@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:ultimate_alarm_clock/utils/auth.dart';
+
 // import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -10,7 +13,9 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: Colors.amber[700],
       body: Center(
         child: ElevatedButton.icon(
-          onPressed: () {
+          onPressed: () async {
+            User? user =
+                await Authentication.signInWithGoogle(context: context);
             // TODO: Implement Google login functionality
           },
           icon: Image.asset(
